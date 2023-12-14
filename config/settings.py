@@ -82,7 +82,6 @@ DATABASES = {
     }
 }
 
-
 ## MySQL setup
 # DATABASES = {
 #     'default': {
@@ -133,7 +132,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static/'
+    BASE_DIR / 'static/', # INNEN JÖNNEK A KÉPEK
+    BASE_DIR / 'frontend/static/' # INNEN JÖN A CSS/JS
 ]
 
 # Default primary key field type
