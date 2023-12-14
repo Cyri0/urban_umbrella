@@ -27,12 +27,20 @@ fetch('/items/')
         let ar = document.createElement('h3')
         if(item.discount_percent == 0){
             ar.innerText = item.base_price
+            ar.innerText += ' Ft'
+
         }else{
             ar.innerText = item.base_price * (100 - item.discount_percent) / 100
-            // TODO Show old price
+            ar.innerText += ' Ft'
+            
+            let old = document.createElement('span')
+            old.classList.add('old-price')
+            old.innerText = item.base_price
+            old.innerText += ' Ft'
+
+            ar.appendChild(old)
         }
 
-        ar.innerText += ' Ft'
 
         // AKCIÓ
 
